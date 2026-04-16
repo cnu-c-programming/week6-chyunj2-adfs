@@ -1,6 +1,6 @@
 #include<stdio.h>
 
-int print_2d_arr(int* rows[], int row_size, int col_size)
+void print_2d_arr(int* rows[], int row_size, int col_size)
 {
     for(int i = 0; i < row_size; i++)
     {
