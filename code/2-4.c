@@ -1,12 +1,12 @@
 #include<stdio.h>
 
-int print_2d_arr(int* element, int row_size, int col_size)
+int print_2d_arr(int* rows[], int row_size, int col_size)
 {
     for(int i = 0; i < row_size; i++)
     {
         for(int j = 0; j < col_size; j++)
         {
-            printf("%d ", *(element + i * col_size + j));
+            printf("%d ", *(rows[i] + j));
         }
         printf("\n");
     }
@@ -14,6 +14,7 @@ int print_2d_arr(int* element, int row_size, int col_size)
 int main()
 {
     int arr[2][3] = {1, 2, 3, 4, 5, 6};
-    print_2d_arr(&arr[0][0], 2, 3);
+    int *rows[2] = {arr[0], arr[1]};
+    print_2d_arr(rows, 2, 3);
     return 0;
 }
